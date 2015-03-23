@@ -2,12 +2,8 @@
 # FB - 201012116
 
 import pandas as pd
-import numpy as np
-# import matplotlib.pyplot as plt
-import dateutil.parser
 import time
 import datetime
-import pickle
 import re
 import string
 
@@ -47,15 +43,6 @@ def get_eventlog():
         events = win32evtlog.ReadEventLog(hand, flags, 0)
         if events:
             for event in events:
-                '''print(datetime.datetime.fromtimestamp(event.TimeGenerated))
-                print(event.TimeGenerated.__class__.__name__)
-                print(time.strftime("%H:%M", time.localtime(event.TimeGenerated)))
-                print(int(event.TimeGenerated))
-                print(datetime.datetime(int(event.TimeGenerated)))'''
-                #print(time.ctime(event.TimeGenerated))
-                #print('{}'.format(event.TimeGenerated.Format()))
-                #print('{}'.format(date2sec(event.TimeGenerated.Format())))
-                #print(datetime.datetime.fromtimestamp(date2sec(event.TimeGenerated.Format())))
                 tmp_array.append((
                 event.EventCategory,
                 datetime.datetime.fromtimestamp(date2sec(event.TimeGenerated.Format())),
