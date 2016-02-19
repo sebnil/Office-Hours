@@ -1,0 +1,1 @@
+python %~dp0\append_to_file.py IN
