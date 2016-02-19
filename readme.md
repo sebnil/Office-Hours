@@ -1,18 +1,17 @@
-!! This is a work in progress !! 
-
 At work I need to fill in my office hours into a website. Sometimes I forget.
-By parsing logon and logout events in the windows event log, you can get approximate office hours. 
-The event log has lots of entries though, and this tool does it all for you. 
-  
+By running a python script on login and logoff my office hours are written to a txt file.
 
+How to use:
+1. Clone this project to any folder.
+2. Run gpedit.msc
+3. User Configuration->Windows Settings->Scripts (Logon/Logoff)
+4. Logon, Properties, Scripts, Add...
+5. Choose logon.bat in repository folder
+6. Do the same for logoff but choose logoff.bat
 
-```
-$python main.py
-# Date: 2015-03-22 18:32:31.489169
-First login: 2015-03-22T12:33:02.000000000+0100
-Last login: 2015-03-22T14:03:55.000000000+0100
-
-# Date: 2015-03-21 18:32:31.489169
-First login: 2015-03-21T14:14:38.000000000+0100
-Last login: 2015-03-21T15:30:32.000000000+0100
-```
+For every logon and logoff an entry should be added to office_hours.txt
+Example:
+'''
+IN  2016-02-19 08:13:12
+OUT 2016-02-19 17:17:53
+'''
