@@ -1,6 +1,5 @@
 import sys
 from time import gmtime, strftime
-#strftime("%Y-%m-%d %H:%M:%S", gmtime())
 import os
 
 # change current directory to script directory
