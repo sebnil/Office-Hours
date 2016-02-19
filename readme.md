@@ -12,9 +12,9 @@ By running a python script on login and logoff my office hours are written to a 
 6. Do the same for logoff but choose logoff.bat
 
 ### Output
-For every logon and logoff an entry should be added to office_hours.txt
+For every logon and logoff, an entry is added to office_hours.txt (created in the same folder as the Python script)
 
-Example:
+Example from office_hours.txt:
 ```
 IN  2016-02-19 08:13:12
 OUT 2016-02-19 17:17:53
