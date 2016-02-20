@@ -14,5 +14,6 @@ except:
     action = '?'
 
 # append to log file
-with open(r"C:\ProjectArea\Office-Hours\office_hours.txt", "a") as myfile:
-    myfile.write("{action}\t{time}\n".format(action=action, time=strftime("%Y-%m-%d %H:%M:%S", gmtime())))
+with open(os.path.join(dname, 'office_hours.txt'), 'a') as log_file:
+    log_file.write("{action}\t{time}\n".format(
+        action=action, time=strftime("%Y-%m-%d %H:%M:%S", gmtime())))
