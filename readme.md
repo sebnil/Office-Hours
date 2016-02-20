@@ -22,7 +22,7 @@ IN  2016-02-20 09:01:05
 OUT 2016-02-20 16:31:56
 ```
 
-Known issues:
+### Known issues:
 
 Windows 8.1 has 5 minutes logon scripts delay. That's not critical for our case but for exact statistics we need to change this.
 
